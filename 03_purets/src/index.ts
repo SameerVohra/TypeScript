@@ -25,7 +25,7 @@
 
 //++++++++++++++++++++++++++++++++++++++++++++GETTERS AND SETTERS++++++++++++++++++++++++++++++++++++++
 class user {
-  private _courseCount = 1;
+  protected _courseCount = 1;
   readonly city: string = "JAIPUR";
   constructor(
     public email: string,
@@ -50,5 +50,12 @@ class user {
       throw new Error("WAISE HI BAS");
     }
     this._courseCount = courseNum;
+  }
+}
+
+class subUser extends user {
+  isFamily: boolean = true;
+  changeCourseCount() {
+    this._courseCount = 7;
   }
 }
