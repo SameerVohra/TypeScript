@@ -50,3 +50,22 @@ function anotherFunction<T, U extends Database>(valOne: T, valTwo: U): object {
 }
 
 // anotherFunction(3, {})
+
+interface quiz {
+  name: string;
+  type: string;
+}
+
+interface courses {
+  name: string;
+  author: string;
+  subject: string;
+}
+
+class sellAble<T> {
+  public cart: T[] = [];
+
+  addToCart(products: T) {
+    this.cart.push(products);
+  }
+}
